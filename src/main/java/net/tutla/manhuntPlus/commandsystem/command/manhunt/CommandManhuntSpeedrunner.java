@@ -44,7 +44,7 @@ public class CommandManhuntSpeedrunner extends TutlaCommand {
                 return true;
             } else if (ctx.args[1].equalsIgnoreCase("remove")){
                 Player target = Bukkit.getPlayer(ctx.args[2]);
-                if (TutlaUtil.isTargetValid(target)) {
+                if (target != null) {
                     if (ManhuntContext.getSpeedrunners().contains(target.getUniqueId())){
                         ManhuntContext.removeSpeedrunner(target);
                         Bukkit.broadcastMessage("§a"+target.getName() + " is no longer a speedrunner!");

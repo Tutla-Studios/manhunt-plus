@@ -44,8 +44,8 @@ public class CommandManhuntHunter extends TutlaCommand {
                 }
                 return true;
             } else if (ctx.args[1].equalsIgnoreCase("remove")){
-                Player target = Bukkit.getPlayer(ctx.args[1]);
-                if (TutlaUtil.isTargetValid(target)) {
+                Player target = Bukkit.getPlayer(ctx.args[2]);
+                if (target != null) {
                     if (ManhuntContext.getHunters().contains(target.getUniqueId())){
                         ManhuntContext.removeHunter(target);
                         Bukkit.broadcastMessage("§a"+target.getName() + " is no longer a hunter!");
