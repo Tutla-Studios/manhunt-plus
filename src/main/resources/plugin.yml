@@ -1,7 +1,7 @@
 name: ManhuntPlus
 version: '1.4.1'
 main: net.tutla.manhuntPlus.ManhuntPlus
-api-version: '1.20'
+api-version: '26.2'
 authors: [ TutlaMC ]
 depend: [Multiverse-Core]
 website: https://tutla.net

@@ -12,4 +12,4 @@ surround-radius: 3.0 # keep it a decimal/float/double
 # Use "HUNTER" so only the hunter can access the twist
 # Use "X" so only the speedrunner can access the twist
 
-pig-drop-op-loot-for: "SPEEDRUNNER"show-compass-actionbar: true # Shows target dimension in action bar when tracking cross-dimension
+pig-drop-op-loot-for: "SPEEDRUNNER"
