@@ -83,14 +83,16 @@ public class ManhuntCompass {
 
 
         if (!hunter.getWorld().getEnvironment().equals(target.getWorld().getEnvironment())) {
-            String targetDim = switch (target.getWorld().getEnvironment()) {
-                case NETHER -> "the Nether";
-                case THE_END -> "the End";
-                default -> "the Overworld";
-            };
-            hunter.sendActionBar(TextUtil.parse(
-                    "<gray>" + target.getName() + " is in <white>" + targetDim + "</white> – pointing to portal</gray>"
-            ));
+            if (ManhuntPlus.getInstance().getConfig().getBoolean("show-compass-actionbar", true)) {
+                String targetDim = switch (target.getWorld().getEnvironment()) {
+                    case NETHER -> "the Nether";
+                    case THE_END -> "the End";
+                    default -> "the Overworld";
+                };
+                hunter.sendActionBar(TextUtil.parse(
+                        "<gray>" + target.getName() + " is in <white>" + targetDim + "</white> – pointing to portal</gray>"
+                ));
+            }
         }
     }
 

@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id("xyz.jpenilla.run-paper") version "3.0.2"
+    id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
 group = 'net.tutla'
@@ -8,6 +8,10 @@ version = '1.4.1'
 
 repositories {
     mavenCentral()
+    maven {
+        name = "onarandombox"
+        url = "https://repo.onarandombox.com/content/groups/public/"
+    }
     maven {
         name = "papermc-repo"
         url = "https://repo.papermc.io/repository/maven-public/"
@@ -19,7 +23,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:26.1.2.build.+")
+    compileOnly("io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT")
+    compileOnly("com.onarandombox.multiversecore:Multiverse-Core:4.3.1")
 }
 
 tasks {
@@ -27,11 +32,11 @@ tasks {
         // Configure the Minecraft version for our task.
         // This is the only required configuration besides applying the plugin.
         // Your plugin's jar (or shadowJar if present) will be used automatically.
-        minecraftVersion("26.1.2")
+        minecraftVersion("1.20.6-R0.1-SNAPSHOT")
     }
 }
 
-def targetJavaVersion = 25
+def targetJavaVersion = 21
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion

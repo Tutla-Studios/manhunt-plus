@@ -61,9 +61,9 @@ public class Twist {
     public void lootForPlayer(Player player, int count){
         if (lootpool.equals("default")){
             LootPool pool = LootPoolManager.getDefaultLoot();
-            player.give(pool.getSomeLoot(count));
+            pool.getSomeLoot(count).forEach(item -> player.getInventory().addItem(item));
         } else {
-            player.give(lootPoolLevellingForPlayer(player.getUniqueId()).getLoot());
+            player.getInventory().addItem(lootPoolLevellingForPlayer(player.getUniqueId()).getLoot());
         }
     }
 
