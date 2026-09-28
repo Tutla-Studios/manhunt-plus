@@ -1,6 +1,26 @@
-# 🧭 Manhunt+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Yezun-hikari/Yezun-hikari/main/oneko_thinking.png" width="128" />
+  <h1>🧭 Manhunt+</h1>
+</div>
 
 **Manhunt+** is a powerful Minecraft manhunt plugin featuring compass tracking across dimensions, twists, and full control over the hunt!
+
+---
+
+## 📑 Table of Contents
+
+- [Features & Usage](#-features--usage)
+- [Commands](#-commands)
+  - [Basic Setup & Commands](#-basic-setup--commands)
+  - [Extras](#-extras)
+  - [Settings](#-settings)
+  - [Custom Twist Creator](#-custom-twist-creator)
+  - [LootPool Commands](#-lootpool-commands)
+- [Default Twists](#-default-twists)
+- [Configuration](#-configuration)
+- [Coming Soon](#-coming-soon)
+- [Support, Tracking & More](#-support-tracking--more)
+- [Other Tutla Studio Projects](#-other-tutla-studio-projects)
 
 ---
 
@@ -11,97 +31,81 @@
 - 🌀 Enrich the game with twists
 - 🛠️ Create your own twists *(coming soon!)*
 
-### 🕹️ Commands
+---
 
-<details>
-<summary>🧍 <b>Basic Setup & Commands</b></summary>
+## 🕹️ Commands
 
-<br>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Yezun-hikari/Yezun-hikari/main/oneko_hungry_smol.gif" />
+</div>
 
-| ⚙️ Category | 💻 Command                             | 📖 Description                                                       |
-|------------|----------------------------------------|----------------------------------------------------------------------|
-| 🧍 Setup | `/manhunt speedrunner add <player>`    | Add a speedrunner                                                    |
-| 🧍 Setup | `/manhunt speedrunner remove <player>` | Remove a speedrunner                                                 |
-| 🧍 Setup | `/manhunt hunter add <player>`         | Add a hunter                                                         |
-| 🧍 Setup | `/manhunt hunter remove <player>`      | Remove a hunter                                                      |
-| 🚀 Game | `/manhunt start`                       | Start the manhunt                                                    |
-| 🛑 Game | `/manhunt stop`                        | Stop the manhunt                                                     |
-| 📋 Info | `/manhunt list`                        | List all hunters & speedrunners                                      |
-| 📋 Info | `/manhunt donate`                      | [Donate](https://donatr.ee/tutlamc?utm_source=copy&utm_medium=share) |
-| 🧭 Tracking | `/compass <player:speedrunner>`        | Track a speedrunner                                                  |
+### 🧍 Basic Setup & Commands
 
-</details>
+| ⚙️ Category | 💻 Command                             | 📖 Description                                                       | 🔑 Permission |
+|------------|----------------------------------------|----------------------------------------------------------------------|--------------|
+| 🧍 Setup | `/manhunt speedrunner add <player>`    | Add a speedrunner                                                    | `permission.node` |
+| 🧍 Setup | `/manhunt speedrunner remove <player>` | Remove a speedrunner                                                 | `permission.node` |
+| 🧍 Setup | `/manhunt hunter add <player>`         | Add a hunter                                                         | `permission.node` |
+| 🧍 Setup | `/manhunt hunter remove <player>`      | Remove a hunter                                                      | `permission.node` |
+| 🚀 Game | `/manhunt start`                       | Start the manhunt                                                    | `permission.node` |
+| 🛑 Game | `/manhunt stop`                        | Stop the manhunt                                                     | `permission.node` |
+| 📋 Info | `/manhunt list`                        | List all hunters & speedrunners                                      | `permission.node` |
+| 📋 Info | `/manhunt donate`                      | [Donate](https://donatr.ee/tutlamc?utm_source=copy&utm_medium=share) | `permission.node` |
+| 🧭 Tracking | `/compass <player:speedrunner>`        | Track a speedrunner                                                  | *None* |
 
-<details>
-<summary> 🧪 Extras </summary>
+### 🧪 Extras
 
-| 💻 Command | 📖 Description |
-|-----------|----------------|
-|`/manhunt prepare` | Waits for a speedrunner to hit a hunter to start
-| `/surround <speedrunner>` | Surrounds the speedrunner with all hunters
-</details>
+| 💻 Command | 📖 Description | 🔑 Permission |
+|-----------|----------------|--------------|
+| `/manhunt prepare` | Waits for a speedrunner to hit a hunter to start | `permission.node` |
+| `/surround <speedrunner>` | Surrounds the speedrunner with all hunters | `permission.node` |
 
-<details>
-<summary>⚙️ <b>Settings</b></summary>
+### ⚙️ Settings
 
-<br>
+| 💻 Command | 📖 Description | 🔑 Permission |
+|-----------|----------------|--------------|
+| `/manhunt countdown <minutes>` | Set a max time limit ⏱️ (**0 to disable**) | `permission.node` |
+| `/manhunt twist <twist>` | Apply a twist (default: `DEFAULT`) | `permission.node` |
+| `/manhunt help` | Open the help menu 📖 | `permission.node` |
 
-| 💻 Command | 📖 Description |
-|-----------|----------------|
-| `/manhunt countdown <minutes>` | Set a max time limit ⏱️ (**0 to disable**) |
-| `/manhunt twist <twist>` | Apply a twist (default: `DEFAULT`) |
-| `/manhunt help` | Open the help menu 📖 |
+### 🌀 Custom Twist Creator
 
-</details>
+| 💻 Command | 📖 Description | 🔑 Permission |
+|-----------|----------------|--------------|
+| `/twist create <name:one_word>` | Create a new twist | `permission.node` |
+| `/twist help` | Show help for twist commands | `permission.node` |
+| `/twist list` | List all twists | `permission.node` |
+| `/twist effect <twist_name> <effect>` | Set twist output action | `permission.node` |
+| `/twist trigger <twist_name> <trigger>` | Set twist trigger | `permission.node` |
+| `/twist triggerentity <entity>` | Set trigger entity | `permission.node` |
+| `/twist triggerblock <block>` | Set trigger block | `permission.node` |
+| `/twist appliesto <group>` | Set who can trigger the twist | `permission.node` |
+| `/twist lootpool <twist_name> <lootpool_name>` | Assign a lootpool | `permission.node` |
+| `/twist description <twist_name> <description>` | Set twist description | `permission.node` |
 
-<details>
-<summary>🌀 <b>Custom Twist Creator</b></summary>
+### 📦 LootPool Commands
 
-<br>
-
-| 💻 Command | 📖 Description |
-|-----------|----------------|
-| `/twist create <name:one_word>` | Create a new twist |
-| `/twist help` | Show help for twist commands |
-| `/twist list` | List all twists |
-| `/twist effect <twist_name> <effect>` | Set twist output action |
-| `/twist trigger <twist_name> <trigger>` | Set twist trigger |
-| `/twist triggerentity <entity>` | Set trigger entity |
-| `/twist triggerblock <block>` | Set trigger block |
-| `/twist appliesto <group>` | Set who can trigger the twist |
-| `/twist lootpool <twist_name> <lootpool_name>` | Assign a lootpool |
-| `/twist description <twist_name> <description>` | Set twist description |
-
-</details>
-
-<details>
-<summary>📦 <b>LootPool Commands</b></summary>
-
-<br>
-
-| 💻 Command | 📖 Description |
-|-----------|----------------|
-| `/lootpool create <name:one_word>` | Create a new lootpool |
-| `/lootpool pool add <item> <number> <weight>` | Add item to pool |
-| `/lootpool pool remove <index>` | Remove item by index |
-| `/lootpool pool list` | List pool items |
-| `/lootpool tier create <name>` | Start a new lootpool tier |
-| `/lootpool tier cancel` | Cancel tier creation |
-| `/lootpool tier complete` | Finish and save tier |
-| `/lootpool tier add <item>` | Add item to current tier |
-| `/lootpool tier remove <index>` | Remove item from tier |
-| `/lootpool delete <name>` | Delete a lootpool |
-| `/lootpool difficultymultiplier <decimal>` | Set difficulty multiplier |
-| `/lootpool complete` | Complete lootpool |
-| `/lootpool list` | List all lootpools |
-| `/lootpool cancel` | Cancel lootpool creation |
-| `/lootpool help` | Show help for lootpool commands |
-
-</details>
+| 💻 Command | 📖 Description | 🔑 Permission |
+|-----------|----------------|--------------|
+| `/lootpool create <name:one_word>` | Create a new lootpool | `permission.node` |
+| `/lootpool pool add <item> <number> <weight>` | Add item to pool | `permission.node` |
+| `/lootpool pool remove <index>` | Remove item by index | `permission.node` |
+| `/lootpool pool list` | List pool items | `permission.node` |
+| `/lootpool tier create <name>` | Start a new lootpool tier | `permission.node` |
+| `/lootpool tier cancel` | Cancel tier creation | `permission.node` |
+| `/lootpool tier complete` | Finish and save tier | `permission.node` |
+| `/lootpool tier add <item>` | Add item to current tier | `permission.node` |
+| `/lootpool tier remove <index>` | Remove item from tier | `permission.node` |
+| `/lootpool delete <name>` | Delete a lootpool | `permission.node` |
+| `/lootpool difficultymultiplier <decimal>` | Set difficulty multiplier | `permission.node` |
+| `/lootpool complete` | Complete lootpool | `permission.node` |
+| `/lootpool list` | List all lootpools | `permission.node` |
+| `/lootpool cancel` | Cancel lootpool creation | `permission.node` |
+| `/lootpool help` | Show help for lootpool commands | `permission.node` |
 
 ---
 
-### 🌀 Default Twists
+## 🌀 Default Twists
 - `DEFAULT` – Standard manhunt rules
 - `PIG_OP_LOOT` – Pigs drop OP loot (only for the speedrunner 🐷💎)
 - **More twists coming soon! 🔧**
@@ -120,9 +124,15 @@
     - `broadcast-time-every` - Broadcast time interval(in seconds)
 - `surround-radius: DECIMAL` – Distance between speedrunner and hunters when using `/surround`. Default: `3`
 - `name-tracking-compass`: Name the compass to which player its tracking
+
 ---
 
 ## 🚧 Coming Soon
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Yezun-hikari/Yezun-hikari/main/oneko_sleep.gif" />
+</div>
+
 - 🌀 Many more twists
 - 📊 Leaderboards?
 - 🛠️ More customizability
