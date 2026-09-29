@@ -35,10 +35,6 @@
 
 ## 🕹️ Commands
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Yezun-hikari/Yezun-hikari/main/oneko_hungry_smol.gif" />
-</div>
-
 ### 🧍 Basic Setup & Commands
 
 | ⚙️ Category | 💻 Command                             | 📖 Description                                                       | 🔑 Permission |
@@ -129,9 +125,7 @@
 
 ## 🚧 Coming Soon
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Yezun-hikari/Yezun-hikari/main/oneko_sleep.gif" />
-</div>
+<img src="https://raw.githubusercontent.com/Yezun-hikari/Yezun-hikari/main/oneko_sleep.gif" align="right" />
 
 - 🌀 Many more twists
 - 📊 Leaderboards?
