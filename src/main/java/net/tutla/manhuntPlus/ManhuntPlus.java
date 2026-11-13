@@ -34,9 +34,7 @@ public final class ManhuntPlus extends JavaPlugin {
 
     // twist shit
     // ik the code is shit but like im shit at naming
-
-
-
+    
     // actual shi
     @Override
     public void onEnable() {
